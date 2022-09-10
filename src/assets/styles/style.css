@@ -57,6 +57,8 @@ body {
   max-width: 100vw;
   font-weight: 400;
   font-family: "CircularStd", sans-serif; }
+  body.no-scroll {
+    overflow: hidden; }
   @media screen and (max-width: 767px) {
     body {
       padding-bottom: 0; } }
@@ -271,56 +273,6 @@ a {
 .flip-enter-from {
   transform: rotateX(-90deg);
   opacity: 0; }
-
-header.top-nav {
-  background-color: rgba(18, 18, 18, 0.25);
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(0.25rem); }
-  header.top-nav nav button {
-    color: #FFF;
-    width: 3rem; }
-    header.top-nav nav button span {
-      width: 2rem;
-      height: 1.125rem;
-      position: relative;
-      display: block; }
-      header.top-nav nav button span span {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        border-radius: 2px;
-        top: 50%;
-        transform: translateY(-50%); }
-        header.top-nav nav button span span:before, header.top-nav nav button span span:after {
-          content: "";
-          width: 75%;
-          height: 2px;
-          border-radius: 2px;
-          background: #fff;
-          position: absolute;
-          transition: all 0.25s ease-out 0.5s; }
-        header.top-nav nav button span span:before {
-          right: 0;
-          top: -0.5rem; }
-        header.top-nav nav button span span:after {
-          left: 0;
-          bottom: -0.5rem; }
-  header.top-nav nav img {
-    max-width: 3.5rem; }
-
-.mobile-nav-enter-active,
-.mobile-nav-leave-active {
-  transition: all 0.5s cubic-bezier(0.23, 0.88, 0.61, 1); }
-
-.mobile-nav-enter-from,
-.mobile-nav-leave-to {
-  transform: translateX(-18rem); }
-
-.mobile-nav-enter-to {
-  transform: translateX(0rem); }
 
 .drawer-nav {
   position: fixed;

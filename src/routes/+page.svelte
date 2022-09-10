@@ -3,16 +3,13 @@
 	import HomeSummary from '../components/HomeSummary.svelte'	
 	import QuicklookAccounts from '../components/QuicklookAccounts.svelte'	
 	import QuicklookNeurons from '../components/QuicklookNeurons.svelte'
-	import { feedbackOpen, overlayOpen, OverlayChildComponent } from '../stores/Stores.js'
+	import { feedbackOpen, overlayOpen, OverlayChildComponent, OverlayComponentId } from '../stores/Stores.js'
 	import Feedback from '../components/Feedback.svelte'
 	import Overlay from '../components/Overlay.svelte'
-	
-	let c = 2
 	let padded = false
 </script>
 
 <div in:fade class="page-wrapper">
-	
 	<HomeSummary />
 	<section class="[ homePreviews ]">
 		<div class="top-curve-wrapper">
@@ -37,11 +34,11 @@
 	{#if $overlayOpen}
 		<Overlay alignTop={true} {padded} on:click={() => overlayOpen.set(false)}>
 			<svelte:component 
-				this={$OverlayChildComponent[c].component} 
-				sectionName={$OverlayChildComponent[c].sectionName}
-				hideHeader={$OverlayChildComponent[c].hideHeader}
-				hideInfo={$OverlayChildComponent[c].hideInfo}
-				showTo={$OverlayChildComponent[c].showTo}
+				this={$OverlayChildComponent[$OverlayComponentId].component} 
+				sectionName={$OverlayChildComponent[$OverlayComponentId].sectionName}
+				hideHeader={$OverlayChildComponent[$OverlayComponentId].hideHeader}
+				hideInfo={$OverlayChildComponent[$OverlayComponentId].hideInfo}
+				showTo={$OverlayChildComponent[$OverlayComponentId].showTo}
 			/>
 		</Overlay>
 	{/if}

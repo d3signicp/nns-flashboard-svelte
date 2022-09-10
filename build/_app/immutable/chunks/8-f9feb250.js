@@ -1,0 +1,1 @@
+import{default as e}from"../components/pages/neurons/_id_/_page.svelte-b2897f3f.js";import"./index-ab6bf70d.js";import"./index-fc08b91d.js";import"./stores-f161eb83.js";import"./neurons-a39e9c22.js";export{e as component};

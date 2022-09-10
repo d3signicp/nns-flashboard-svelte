@@ -1,17 +1,15 @@
 <script>
-// import '../assets/styles/style.scss'
 import { navOpen } from '../stores/Stores.js'
-// export const toggleMobileNav = () => { navOpen.set(!$navOpen) }
-
 </script>
 
 <header class="top-nav sticky">
-	<nav class="spread std-padding-parent">
+	<nav>
 		<button on:click={() => navOpen.set(!$navOpen)} aria-label="Menu">
 			<span><span></span></span>
 		</button>
-		<div>
-			<img src="/nns-logo.png" alt="NNS with Dfinity Foundation logo">
+		<div class="site-name">Network Nervous System</div>
+		<div class="site-logo">
+			<img src="/dfinity.svg" alt="Dfinity Foundation logo">
 		</div>
 	</nav>
 </header>
@@ -26,9 +24,17 @@ header.top-nav
 	backdrop-filter: blur(0.25rem)
 
 	nav
+		display: grid
+		grid-template-columns: auto 1fr auto
+		align-items: center
+		justify-items: center
+		
+		.site-name
+			font-weight: 500
+		
 		button
 			color: $white
-			width: 3rem
+			padding: 1.25rem
 
 			span
 				width: 2rem
@@ -63,9 +69,12 @@ header.top-nav
 					&:after
 						left: 0
 						bottom: -0.5rem
+		
+		.site-logo
+			padding: 1.25rem
 
-		img
-			max-width: 3.5rem
+			img
+				width: 2rem
 
 // .mobile-nav-enter-active,
 // .mobile-nav-leave-active

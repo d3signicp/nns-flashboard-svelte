@@ -28,6 +28,7 @@
 		"svelte": "^3.44.0",
 		"svelte-copy-to-clipboard": "^0.2.5",
 		"svelte-preprocess": "^4.10.7",
+		"svelte-qrcode": "^1.0.0",
 		"svelte-teleport": "^0.1.1",
 		"vite": "^3.0.4"
 	},

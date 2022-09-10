@@ -151,7 +151,8 @@
 		<div in:fade class="[ form ]">
 			<section class="form__section std-padding send-to">
 				<div class="send-to__top">
-					<h3 class="send-to__top__heading">Sender</h3>
+					<h3 class="send-to__top__heading half">Sender</h3>
+					<h3 class="send-to__top__heading half">Balance</h3>
 					<div class="send-to__top__label">
 						<div class="send-to__top__label__dot {accounts[sendFrom].color}"></div>
 						<h3 class="send-to__top__label__name">{accounts[sendFrom].name}</h3>
@@ -344,9 +345,10 @@
 				border-radius: 0.5rem
 				padding: 0.5rem 1rem
 				color: $white
-				font-size: 1.25rem
-				outline: 1px solid transparent
-				transition: outline 0.2s ease-out, box-shadow 0.2 ease-out
+				font-size: 1.125rem
+				border: 1px solid transparent
+				outline: none
+				transition: border 0.2s ease-out, box-shadow 0.2 ease-out
 				appearance: none 
 				-webkit-appearance: none
 				-moz-appearance: none
@@ -357,7 +359,7 @@
 				background-repeat: no-repeat
 				
 				&:focus
-					outline: 1px solid $dfBlueLight
+					border: 1px solid $dfBlueLight
 					box-shadow: 0 0 0.75rem rgba($dfBlueLight, 0.5)
 					background-image: linear-gradient(45deg, gray 50%, transparent 50%),  linear-gradient(135deg, transparent 50%, gray 50%)
 					background-position: calc(100% - 1rem) 1.125rem, calc(100% - 1.4rem) 1.125rem
@@ -369,9 +371,10 @@
 				border-radius: 0.5rem
 				padding: 0.5rem 1rem
 				color: $white
-				font-size: 1.25rem
+				font-size: 1.125rem
 				transition: all 0.2s ease-out
-				outline: 1px solid transparent
+				outline: none
+				border: 1px solid transparent
 				width: 100%
 				
 				&[disabled]
@@ -380,14 +383,14 @@
 				
 				&.balance-exceeded,
 				&.invalid
-					outline: 1px solid red
+					border: 1px solid red
 					
 					&:focus
-						outline: 1px solid red
+						border: 1px solid red
 						box-shadow: 0 0 0.75rem rgba(red, 0.5)
 	
 				&:focus
-					outline: 1px solid $dfBlueLight
+					border: 1px solid $dfBlueLight
 					box-shadow: 0 0 0.75rem rgba($dfBlueLight, 0.5)
 					
 				&::selection
@@ -411,6 +414,9 @@
 			justify-content: space-between
 			align-items: center
 			grid-gap: 0.5rem
+			
+			> *:nth-child(2n+2)
+				justify-self: flex-end
 			
 			&__heading
 				grid-column: 1 / 3
@@ -450,8 +456,8 @@
 				font-size: 1.125rem
 				
 				&.receiver
-					color: $dfGreen
+					color: lighten($dfGreen,10%)
 					
 				&.sender
-					color: $dfBlueLight	
+					color: lighten($dfBlueLight,15%)	
 </style>

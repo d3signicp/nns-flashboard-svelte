@@ -4,7 +4,9 @@
 	import { quintOut } from 'svelte/easing'
 	import accounts from '../json/accounts.json'
 	// import Overlay from '../components/Overlay.svelte'
-	import { overlayOpen } from '../stores/Stores.js'
+	import { overlayOpen, OverlayComponentId } from '../stores/Stores.js'
+	
+	let c = 3
 	
 	// total account balance tween
 	const progress = tweened(0, {
@@ -35,7 +37,7 @@
 		</div>
 		<div class="summary__btn-row">
 			<button class="summary__btn-row__btn">
-				<div on:click={() => overlayOpen.set(true)} class="summary__btn-row__btn__icon">
+				<div on:click={() => {OverlayComponentId.set(3); overlayOpen.set(true)}} class="summary__btn-row__btn__icon">
 					<svg viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<g id="nns_flashboard_home" transform="translate(-65.000000, -209.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -52,7 +54,7 @@
 				</div>
 				<span class="summary__btn-row__btn__label">Receive</span>
 			</button>
-			<button on:click={() => overlayOpen.set(true)} class="summary__btn-row__btn">
+			<button on:click={() => {OverlayComponentId.set(2); overlayOpen.set(true)}} class="summary__btn-row__btn">
 				<div class="summary__btn-row__btn__icon">
 					<svg viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

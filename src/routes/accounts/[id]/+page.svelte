@@ -82,12 +82,6 @@
 					Testing Modal
 				</generalModal> -->
 			</button>
-			<button class="transfer" data-onclick="storeModal.toggleModal">
-				Transfer to Account
-				<!-- <generalModal :modalOn="storeModal.modalOn" ref="modal2">
-					Testing Modal 123
-				</generalModal> -->
-			</button>
 		</section>
 	
 		<ul class="reset-list">
@@ -256,7 +250,7 @@
 	
 	section.actions
 		display: grid
-		grid-template-columns: repeat(2,auto)
+		grid-template-columns: repeat(1,auto)
 		grid-gap: 1rem
 	
 		button
@@ -271,13 +265,13 @@
 				margin-left: 0.5rem
 	
 			&.send
-				background: darken($dfBlueLight,5%)
+				background: $dfMagenta
 				display: flex
 				align-items: center
 				justify-content: center
 	
 			&.transfer
-				background: $dfMagenta
+				background: darken($dfBlueLight,5%)
 	
 	ul
 		border-radius: 1rem
