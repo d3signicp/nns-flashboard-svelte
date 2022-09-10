@@ -1,0 +1,26 @@
+.root
+  position: relative
+
+.feedbackModal
+  position: fixed
+  bottom: 2rem
+  left: 50%
+  transform: translateX(-50%) translateY(0rem)
+  z-index: 99999
+  backface-visibility: hidden
+  background: darken($dfGreen,5%)
+  padding: 1rem 2rem
+  border-radius: 0.5rem
+  border: 1px solid rgba($white,0.05)
+  box-shadow: 0 0 1.5rem rgba($black,1)
+  display: grid
+  grid-template-columns: repeat(2,auto)
+  align-items: center
+  grid-gap: 0.5rem
+  user-select: none
+
+  svg
+    fill: $white
+    width: 1.125rem
+    height: auto
+    opacity: 0.6

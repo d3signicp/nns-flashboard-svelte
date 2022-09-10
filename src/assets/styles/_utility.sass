@@ -1,0 +1,129 @@
+.offScreen
+  position: fixed
+  top: -1000000px
+  left: -1000000px
+
+.spread
+  display: flex
+  justify-content: space-between
+
+.btn
+  border: 0px
+  border-radius: $buttonRadius
+  padding: 5px 12px
+  font-weight: bold
+  vertical-align: middle
+  &:active
+      padding: 6px 11px 4px 13px
+
+.btn-dark
+  background: $topNavBackground
+  color: $topNavColor
+  &:hover
+      background: $cartBackground
+      color: $bodyBackground
+
+.btn-light
+  background: $topNavColor
+  color: $topNavBackground
+  &:hover
+      background: $bodyBackground
+      color: $cartBackground
+
+.center
+  text-align: center
+
+.center-all-single
+  display: flex
+  align-items: center
+  justify-content: center
+
+.column
+  display: flex
+  flex-direction: column
+
+.row
+  display: flex
+
+.cell
+  display: inline-flex
+
+.std-padding
+  padding: 1.25rem
+
+.std-padding-parent > *
+  padding: 1.25rem
+
+.sticky
+  position: sticky
+
+.reset-list
+  list-style: none
+  margin: 0
+  padding: 0
+
+.lightblue
+  background: $dfBlueLight
+
+.gold
+  background: $dfGold
+
+.orange
+  background: $dfOrange
+
+.purple
+  background: $dfPurple
+
+.magenta
+  background: $dfMagenta
+
+.blue
+  background: $dfBlue
+
+.red
+  background: $dfRed
+
+.green
+  background: $dfGreen
+  
+.grey
+  background: $lightGrey
+
+/* Fill Colors */
+[class^="fill-"] *
+  fill: inherit
+
+.fill-lightblue
+  fill: $dfBlueLight
+
+.fill-gold
+  fill: $dfGold
+
+.fill-orange
+  fill: $dfOrange
+
+.fill-purple
+  fill: $dfPurple
+
+.fill-magenta
+  fill: lighten($dfMagenta,15%)
+
+.fill-blue
+  fill: $dfBlue
+
+.fill-red
+  fill: $dfRed
+
+.fill-green
+  fill: $dfGreen
+
+/* end Fill Colors */
+
+.icp
+  font-size: 75%
+  font-weight: 500
+
+.subtle-h1
+  font-size: 1.5rem
+  font-weight: 500
+  color: $lightGrey

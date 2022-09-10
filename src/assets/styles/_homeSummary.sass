@@ -1,0 +1,160 @@
+.homeSummary
+  display: grid
+  align-items: flex-start
+  grid-gap: 1.25rem
+  grid-template-rows: repeat(2, auto)
+  align-content: flex-start
+  position: relative
+  width: 100%
+  // min-height: 19rem
+  padding: 1.5rem 0 /* accounting for top-curve */
+  overflow: hidden
+
+  > *
+    grid-column: 1 / 3
+
+  .summary
+    text-align: center
+    display: grid
+    grid-template-rows: auto auto
+    grid-gap: 2rem
+    z-index: 1
+
+    &__balance
+      display: grid
+
+      &__value
+        p
+          font-size: 3rem
+
+        span.icp
+          font-size: 75%
+          font-family: $sans
+          font-weight: 500
+
+      &__label
+        font-family: $sans
+        font-weight: 700
+        font-size: 0.625rem
+        opacity: 0.65
+        text-transform: uppercase
+
+    &__btn-row
+      display: grid
+      grid-template-columns: repeat(4, auto)
+      justify-content: center
+      grid-gap: 1.5rem
+
+      &__btn
+        color: #fff
+        display: grid
+        grid-gap: 0.25rem
+
+        &__label
+          font-family: $sans
+          font-weight: 700
+          text-transform: uppercase
+          font-size: 0.625rem
+          letter-spacing: 0.05rem
+          opacity: 0.85
+
+        &__icon
+          border: 1px solid rgba(#fff,0.1)
+          box-shadow: 0 0 0.5rem rgba(#fff,0.125)
+          border-radius: 0.5rem
+          padding: 1.25rem
+          display: flex
+          align-items: center
+
+          svg
+            fill: #fff
+            width: 1.375rem
+
+        $borderOpacity: 0.4
+        $bgOpacity: 0.125
+
+        &:hover,
+        &:focus
+          .summary__btn-row__btn__icon
+            transition: all 0.2s ease-out
+
+        &:nth-child(1)
+          .summary__btn-row__btn__icon
+            border-color: rgba($dfBlueLight,$borderOpacity)
+
+          &:hover,
+          &:focus
+            .summary__btn-row__btn__icon
+              background: rgba($dfBlueLight,$bgOpacity)
+
+        &:nth-child(2)
+          .summary__btn-row__btn__icon
+            border-color: rgba($dfMagenta,$borderOpacity)
+
+          &:hover,
+          &:focus
+            .summary__btn-row__btn__icon
+              background: rgba($dfMagenta,$bgOpacity)
+
+        &:nth-child(3)
+          .summary__btn-row__btn__icon
+            border-color: rgba($dfOrange,$borderOpacity)
+
+          &:hover,
+          &:focus
+            .summary__btn-row__btn__icon
+              background: rgba($dfOrange,$bgOpacity)
+
+        &:nth-child(4)
+          .summary__btn-row__btn__icon
+            border-color: rgba($dfGold,$borderOpacity)
+
+          &:hover,
+          &:focus
+            .summary__btn-row__btn__icon
+              background: rgba($dfGold,$bgOpacity)
+
+  // Glowing circles
+  .glow
+     position: absolute
+     top: 16rem
+     left: 50%
+     transform: translateX(-50%) translate3d(0, 0, 0)
+     opacity: 1
+     z-index: 0
+     width: 100vw
+
+     &__circle
+       width: 55vw
+       height: 55vw
+       position: absolute
+       top: 50%
+       border-radius: 50%
+       transform: translateY(-50%) translate3d(0, 0, 0)
+       filter: blur(4rem) brightness(0.4)
+
+       @media screen and (min-width: 569px)
+         width: 225px
+         height: 225px
+
+
+       &.left
+         background: $dfBlueLight
+         left: -10%
+
+         @media screen and (min-width: 569px)
+           left: calc(50% - 250px)
+
+
+       &.center
+         background: $dfMagenta
+         left: 50%
+         transform: translate(-50%,-50%)
+         z-index: 2
+
+       &.right
+         background: $dfGold
+         right: -10%
+
+         @media screen and (min-width: 569px)
+           right: calc(50% - 250px)

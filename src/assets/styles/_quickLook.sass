@@ -1,0 +1,115 @@
+.quickLook
+  &__section
+    display: grid
+    grid-gap: 1rem
+
+    &__header
+      display: grid
+      grid-template-columns: auto auto
+      justify-content: space-between
+      align-items: flex-end
+      padding: 0 0.75rem
+
+      &__title
+        font-size: 1.25rem
+        font-weight: 500
+
+        &__noLink
+          font-size: 2rem
+
+        &__link
+          svg
+            width: 1rem
+            margin-left: 0.25rem
+
+      &__total
+        color: #fff
+        font-size: 1.125rem
+        font-weight: 500
+
+        span.icp
+          font-size: 75%
+          font-family: $sans
+          font-weight: 500
+
+    &__main
+      border-radius: 1rem
+      border: 1px solid rgba(#fff,0.05)
+      box-shadow: 0 0 0.75rem rgba(#000,0.35)
+      // @include softFlat(1,0.5,dark,noHover)
+
+      &__item
+        display: grid
+        grid-gap: 0.5rem
+        padding: 1.5rem 0.75rem
+
+        &:not(:last-child)
+          border-bottom: 1px solid rgba(#fff,0.1)
+
+        &__top
+          display: grid
+          grid-template-columns: 1fr auto
+          justify-content: space-between
+          grid-gap: 0.5rem
+
+          &__label
+            display: grid
+            grid-template-columns: auto auto
+            justify-content: flex-start
+            align-items: center
+            grid-gap: 0.5rem
+
+            &__dot
+              width: 0.625rem
+              height: 0.625rem
+              border-radius: 50%
+
+            &__name
+              display: grid
+              grid-template-columns: auto auto
+              align-items: center
+              grid-gap: 0.5rem
+              font-size: 1.125rem
+              font-weight: 500
+
+              svg
+                display: none
+                width: 0.875rem
+
+          &__value
+            font-size: 1.125rem
+
+            span.icp
+              font-size: 75%
+              font-family: $sans
+              font-weight: 500
+
+        &__bottom
+          display: grid
+          grid-template-columns: auto 1rem
+          justify-content: flex-start
+          align-items: center
+          grid-gap: 0.5rem
+
+          &__account
+            text-overflow: ellipsis
+            overflow: hidden
+            color: $medGrey
+            font-size: 0.875rem
+
+          &__copyIcon
+            svg
+              fill: $medGrey
+              height: 1rem
+
+          &__status
+            color: $medGrey
+            font-size: 0.875rem
+            display: grid
+            align-items: center
+            grid-template-columns: auto auto
+            grid-gap: 0.25rem
+
+            svg
+              fill: $medGrey
+              height: 1rem

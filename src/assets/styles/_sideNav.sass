@@ -1,0 +1,98 @@
+// Sidenav
+.drawer-nav
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100%
+  max-width: 16rem
+  background: rgba($black, 0.85)
+  backdrop-filter: blur(0.5rem)
+  box-shadow: 0 0 3rem rgba($white,0.05)
+  padding-top: 2rem
+  transform: translateX(-18rem)
+  transition: transform 0.5s cubic-bezier(0.23, 0.88, 0.61, 1)
+
+  &.active
+    transform: translateX(0rem)
+
+  li
+    a
+      position: relative
+      font-size: 1.25rem
+      display: grid
+      grid-template-columns: 1rem auto
+      grid-gap: 1rem
+      align-items: center
+      border-bottom: 1px solid rgba($white,0.05)
+      padding: 1.25rem 1rem
+      transition: border-bottom 0.1s ease-out
+
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 1px
+        background: $white
+        opacity: 0
+        bottom: -1px
+        transform: translateX(-105%)
+        transition: all 0.25s ease-out
+
+      svg
+        width: 1rem
+        height: 1rem
+        filter: brightness(1) saturate(0) opacity(0.5)
+        transition: filter 0.25s ease-out
+        
+      &.active
+        svg
+          filter: brightness(1) saturate(1) opacity(1)
+
+      &:hover,
+      &:focus
+        svg
+          filter: brightness(1) saturate(1) opacity(1)
+
+        &:after
+          transform: translateX(0%)
+          opacity: 0.25
+
+  &__close
+    position: absolute
+    top: 0
+    right: 0
+    padding: 0
+
+    button
+      border-bottom-left-radius: 50%
+      width: 2.5rem
+      height: 2.5rem
+      background: rgba($white,0.05)
+      text-align: center
+
+      svg
+        width: 50%
+        fill: $white
+
+// Page overlay when menu open
+.page-overlay
+  background: rgba($black,0.5)
+  width: 100vw
+  height: 100vh
+  position: absolute
+  z-index: 999
+  top: 0
+  left: 0
+  transform-style: preserve-3d
+  backface-visibility: hidden
+  will-change: opacity
+
+.mobile-nav-bg-enter-active,
+.mobile-nav-bg-leave-active
+  transition: all 0.25s ease
+
+.mobile-nav-bg-enter-from,
+.mobile-nav-bg-leave-to
+  opacity: 0.5

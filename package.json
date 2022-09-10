@@ -1,0 +1,35 @@
+{
+	"name": "nns-flashboard-svelte",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-static": "^1.0.0-next.39",
+		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.4.8",
+		"dateformat": "^5.0.3",
+		"dfx": "^0.3.1",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"gsap": "^3.11.1",
+		"modern-css-reset": "^1.4.0",
+		"postcss": "^8.4.16",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
+		"sass": "^1.54.4",
+		"svelte": "^3.44.0",
+		"svelte-copy-to-clipboard": "^0.2.5",
+		"svelte-preprocess": "^4.10.7",
+		"svelte-teleport": "^0.1.1",
+		"vite": "^3.0.4"
+	},
+	"type": "module"
+}

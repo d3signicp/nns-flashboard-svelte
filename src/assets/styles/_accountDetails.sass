@@ -1,0 +1,180 @@
+.account-details
+  display: grid
+  grid-gap: 2rem
+
+  header
+    display: grid
+    grid-gap: 1rem
+    align-items: center
+
+    .account-name
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      h2
+        font-size: 1.75rem
+        display: grid
+        grid-template-columns: repeat(2,auto)
+        grid-gap: 0.5rem
+        align-items: center
+
+        .dot
+          width: 0.625rem
+          height: 0.625rem
+          border-radius: 50%
+
+      .account-balance
+        font-size: 1.5rem
+        font-weight: 500
+
+    .account-address
+      font-size: 1.25rem
+      color: $medGrey
+      word-break: break-all
+
+      svg
+        fill: $medGrey
+        height: 1rem
+        width: auto
+        margin-left: 0.25rem
+
+  section.actions
+    display: grid
+    grid-template-columns: repeat(2,auto)
+    grid-gap: 1rem
+
+    button
+      color: $white
+      font-weight: 500
+      border-radius: 3rem
+      padding: 0.75rem
+
+      svg
+        width: 1rem
+        height: auto
+        margin-left: 0.5rem
+
+      &.send
+        background: darken($dfBlueLight,5%)
+        display: flex
+        align-items: center
+        justify-content: center
+
+      &.transfer
+        background: $dfMagenta
+
+  ul
+    border-radius: 1rem
+    border: 1px solid rgba(#fff,0.025)
+    box-shadow: 0 0 0.75rem rgba(#000,0.2)
+
+    li
+      word-wrap: break-word
+      display: grid
+      // grid-gap: 0.5rem
+
+      &:not(:last-child)
+        border-bottom: 1px solid rgba(#fff,0.1)
+
+      .top
+        display: grid
+        grid-template-columns: auto 1fr auto
+        grid-gap: 0.5rem 1.25rem
+        justify-content: space-between
+        align-items: center
+        padding: 1.5rem 1.25rem 1.5rem 0.75rem
+
+      .txn-type
+        display: grid
+        grid-template-columns: repeat(2,auto)
+        grid-gap: 0.5rem
+        justify-content: flex-start
+        align-items: center
+        font-size: 1.25rem
+
+        svg
+          width: 1.5rem
+          height: auto
+
+          &.received
+            fill: $dfGreen
+          &.sent
+            fill: $dfBlueLight
+
+      .txn-amount
+        display: grid
+        grid-template-columns: repeat(2,auto)
+        grid-gap: 0.5rem
+        align-items: center
+
+        > span
+          display: flex
+
+        .dec
+          position: relative
+          display: flex
+
+          &.hide
+            display: none
+
+        .icp-icon
+          display: flex
+          align-items: center
+          font-size: 75%
+          font-weight: 500
+          margin-left: 0.5rem
+
+        svg
+          width: 1.25rem
+          height: auto
+          // fill: $white
+          align-self: center
+          transform: translateZ(0) scale(1,1)
+
+      .date-time
+        color: $lightGrey
+        font-weight: 400
+        font-size: 0.875rem
+        text-align: right
+
+        .txn-date
+          // color: $white
+        .txn-time
+          opacity: 0.7
+
+      .expand-details
+        display: grid
+        align-items: center
+
+        svg
+          width: 1rem
+          height: auto
+          fill: $white
+          // backface-visibility: hidden
+          transform: rotateX(0deg) translateZ(0) scale(1,1)
+          transition: transform 0.25s ease-out
+
+        &.open
+          svg
+            transform: rotateX(180deg) translateZ(0) scale(1,1)
+
+      .txn-toFrom
+        color: $medGrey
+        transform: translateZ(0) scale(1, 1)
+        backface-visibility: hidden
+        word-break: break-all
+        padding: 0rem 1.25rem 1.5rem 0.75rem
+        
+        span
+          color: $white
+          
+          &.copyThis
+            color: $medGrey
+        
+        svg
+          fill: $medGrey
+          height: 1rem
+          width: auto
+          display: inline-block
+          margin-left: 0.25rem

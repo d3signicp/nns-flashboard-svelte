@@ -1,0 +1,18 @@
+=truncate
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+
+@mixin softFlat($border, $shadow, $shade, $hover)
+
+  @if $shade == 'light'
+    background: $gradBgLight
+  @else
+    background: $gradBgDark
+
+  border-radius: ($border*1)+rem
+  box-shadow: ($shadow*0.5)+rem ($shadow*0.5)+rem ($shadow*1.25)+rem $shadowLight, ($shadow*(-0.5))+rem ($shadow*(-0.5))+rem ($shadow*1.25)+rem $shadowDark
+
+  @if $hover == 'hover'
+    &:hover
+      box-shadow: ($shadow*0.25)+rem ($shadow*0.25)+rem ($shadow*0.5)+rem $shadowLight, ($shadow*(-0.25))+rem ($shadow*(-0.25))+rem ($shadow*0.5)+rem $shadowDark

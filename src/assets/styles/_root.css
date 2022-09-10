@@ -1,0 +1,20 @@
+:root {
+    --bodyBackground: #121212;
+    --bodyTextColor: #ffffff;
+    
+    --dfBlue: #2842D5;
+    --dfBlueLight: #28ABE3;
+    --dfGold: #FBB03B;
+    --dfMagenta: #ED1F79;
+    --dfOrange: #F15B24;
+    --dfPurple: #542785;
+    --dfGreen: #08BC50;
+    --dfRed: #AE0A0C;
+    --black: #121212;
+    --darkGrey: #181818;
+    --modalGrey: #222222;
+    --highlightBlue: #3b88fd;
+    --lightGrey: #ccc;
+    --medGrey: #666;
+
+}
