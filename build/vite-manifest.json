@@ -3,21 +3,17 @@
     "file": "_app/immutable/assets/circularstd-light-90fabf7e.woff2",
     "src": "src/assets/fonts/circularstd/circularstd-light.woff2"
   },
-  "src/assets/fonts/circularstd/circularstd-book.woff2": {
-    "file": "_app/immutable/assets/circularstd-book-4e5c1835.woff2",
-    "src": "src/assets/fonts/circularstd/circularstd-book.woff2"
-  },
   "src/assets/fonts/circularstd/circularstd-medium.woff2": {
     "file": "_app/immutable/assets/circularstd-medium-e8382b5d.woff2",
     "src": "src/assets/fonts/circularstd/circularstd-medium.woff2"
   },
+  "src/assets/fonts/circularstd/circularstd-book.woff2": {
+    "file": "_app/immutable/assets/circularstd-book-4e5c1835.woff2",
+    "src": "src/assets/fonts/circularstd/circularstd-book.woff2"
+  },
   "src/assets/fonts/circularstd/circularstd-bold.woff2": {
     "file": "_app/immutable/assets/circularstd-bold-b0b9dd11.woff2",
     "src": "src/assets/fonts/circularstd/circularstd-bold.woff2"
-  },
-  "src/assets/fonts/circularstd/circularstd-book.woff": {
-    "file": "_app/immutable/assets/circularstd-book-03a07a34.woff",
-    "src": "src/assets/fonts/circularstd/circularstd-book.woff"
   },
   "src/assets/fonts/circularstd/circularstd-light.woff": {
     "file": "_app/immutable/assets/circularstd-light-88c09767.woff",
@@ -26,6 +22,10 @@
   "src/assets/fonts/circularstd/circularstd-medium.woff": {
     "file": "_app/immutable/assets/circularstd-medium-e867a5bf.woff",
     "src": "src/assets/fonts/circularstd/circularstd-medium.woff"
+  },
+  "src/assets/fonts/circularstd/circularstd-book.woff": {
+    "file": "_app/immutable/assets/circularstd-book-03a07a34.woff",
+    "src": "src/assets/fonts/circularstd/circularstd-book.woff"
   },
   "src/assets/fonts/circularstd/circularstd-bold.woff": {
     "file": "_app/immutable/assets/circularstd-bold-93604700.woff",
@@ -48,7 +48,7 @@
     "src": "src/assets/fonts/circularstd/circularstd-bold.svg"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-6c40d181.js",
+    "file": "_app/immutable/start-ad93d438.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -140,7 +140,7 @@
     ]
   },
   "src/routes/accounts/[id]/+page.svelte": {
-    "file": "_app/immutable/components/pages/accounts/_id_/_page.svelte-5ca5a148.js",
+    "file": "_app/immutable/components/pages/accounts/_id_/_page.svelte-c642e3da.js",
     "src": "src/routes/accounts/[id]/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -155,7 +155,7 @@
       "_neurons-a39e9c22.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-f0b42eab.css"
+      "_app/immutable/assets/+page-d5f14137.css"
     ]
   },
   "src/routes/canisters/+page.svelte": {
@@ -336,7 +336,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-e6fb1e5c.js",
+    "file": "_app/immutable/chunks/4-25fd1c18.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
@@ -417,28 +417,28 @@
     "file": "_app/immutable/assets/QuicklookNeurons-0e221135.css",
     "src": "QuicklookNeurons.css"
   },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/+page-92a8ad5e.css",
+    "src": "src/routes/+page.css"
+  },
+  "Glow.css": {
+    "file": "_app/immutable/assets/Glow-21eed7d2.css",
+    "src": "Glow.css"
+  },
   "src/routes/accounts/[id]/+page.css": {
-    "file": "_app/immutable/assets/+page-f0b42eab.css",
+    "file": "_app/immutable/assets/+page-d5f14137.css",
     "src": "src/routes/accounts/[id]/+page.css"
   },
   "Overlay.css": {
     "file": "_app/immutable/assets/Overlay-59309c38.css",
     "src": "Overlay.css"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/+page-92a8ad5e.css",
-    "src": "src/routes/+page.css"
-  },
-  "Stores.css": {
-    "file": "_app/immutable/assets/Stores-8e796b38.css",
-    "src": "Stores.css"
-  },
   "src/routes/+layout.css": {
     "file": "_app/immutable/assets/+layout-5966dcdd.css",
     "src": "src/routes/+layout.css"
   },
-  "Glow.css": {
-    "file": "_app/immutable/assets/Glow-21eed7d2.css",
-    "src": "Glow.css"
+  "Stores.css": {
+    "file": "_app/immutable/assets/Stores-8e796b38.css",
+    "src": "Stores.css"
   }
 }

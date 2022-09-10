@@ -210,6 +210,7 @@
 .account-details
 	display: grid
 	grid-gap: 2rem
+	transform: translate3d(0,0,0)
 	
 	header
 		display: grid
