@@ -170,7 +170,7 @@
 						</svg>
 					</CopyToClipboard>
 				</div>
-				<QrCode codeValue={accounts[sendFrom].address} squareSize=250/>
+				<QrCode codeValue={accounts[sendFrom].address} squareSize=300/>
 				<button class="send-to__btn" on:click={() => overlayOpen.set(false)}>Done</button>
 			</section>
 		</div>
